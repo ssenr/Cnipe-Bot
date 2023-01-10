@@ -10,3 +10,4 @@ This Bot was created to provide an interesting C++ learning exercise, as well as
 - [ ] The Ability to Display links and Images in Embedded Messages
 - [ ] Bot does not snipe messages from Users with certain roles (BOTS)
 - [ ] Snipe doesn't work when a user leaves the server (PFP Image Grabbing)
+- [ ] Reply Snipe (Attachment/Message Handling)
