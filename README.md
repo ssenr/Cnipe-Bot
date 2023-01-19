@@ -1,7 +1,13 @@
-# D++ Windows Bot Template
+# Cnipe-Bot
+A C++ Rewrite of the Snipe-Bot I wrote about a year ago. 
 
-A [D++](https://github.com/brainboxdotcc/DPP) Discord Bot template for Visual Studio 2022 (x64 and x86, release and debug). This repository is the result of [this tutorial](https://dpp.dev/build-a-discord-bot-windows-visual-studio.html) with additional enhancements for automatic selection of the correct architecture, and copying of the dll files into the correct folders on successful build.
+[Original Snipe Bot](https://github.com/ssenr/Snipe-Bot)
 
-This template comes packaged with the latest master branch of D++ from the CI. To use this project simply put your code into the `MyBot.cpp` and press F7. You can do much more with this template.
-
-For support and assistance please join [the official support discord](https://discord.gg/dpp).
+# Goals
+This Bot was created to provide an interesting C++ learning exercise, as well as provide significant improvements to my old code. Improvements and new features include:
+- [ ] Faking Discord Messages (Image Processing using a Template)
+- [ ] Sniping Edited Messages
+- [ ] The Ability to Display links and Images in Embedded Messages
+- [ ] Bot does not snipe messages from Users with certain roles (BOTS)
+- [ ] Snipe doesn't work when a user leaves the server (PFP Image Grabbing)
+- [ ] Reply Snipe (Attachment/Message Handling)
