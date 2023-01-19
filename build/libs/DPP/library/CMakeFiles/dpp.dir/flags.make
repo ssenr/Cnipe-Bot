@@ -6,9 +6,9 @@ CXX_DEFINES = -DDPP_BUILD -DDPP_OS=Darwin -DHAVE_PTHREAD_SETNAME_NP -Ddpp_EXPORT
 
 CXX_INCLUDES = -I/opt/homebrew/include -I/Users/duranr/Documents/Cnipe-Bot/libs/DPP/library/../include -I/Users/duranr/Documents/Cnipe-Bot/libs/DPP/library/../include/dpp
 
-CXX_FLAGSarm64 =  -std=c++17 -Wall -Wno-psabi -Wempty-body -Wignored-qualifiers -Wimplicit-fallthrough -Wmissing-field-initializers -Wsign-compare -Wtype-limits -Wuninitialized -Wshift-negative-value -pthread -Os -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIC -std=gnu++17
+CXX_FLAGSarm64 =  -std=c++17 -Wall -Wno-psabi -Wempty-body -Wignored-qualifiers -Wimplicit-fallthrough -Wmissing-field-initializers -Wsign-compare -Wtype-limits -Wuninitialized -Wshift-negative-value -pthread -g -Og -fPIC -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIC -std=gnu++17
 
-CXX_FLAGS =  -std=c++17 -Wall -Wno-psabi -Wempty-body -Wignored-qualifiers -Wimplicit-fallthrough -Wmissing-field-initializers -Wsign-compare -Wtype-limits -Wuninitialized -Wshift-negative-value -pthread -Os -fPIC -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIC -std=gnu++17
+CXX_FLAGS =  -std=c++17 -Wall -Wno-psabi -Wempty-body -Wignored-qualifiers -Wimplicit-fallthrough -Wmissing-field-initializers -Wsign-compare -Wtype-limits -Wuninitialized -Wshift-negative-value -pthread -g -Og -fPIC -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -fPIC -std=gnu++17
 
 # PCH options: libs/DPP/library/CMakeFiles/dpp.dir/cmake_pch_arm64.hxx.pch_OPTIONS = -Winvalid-pch;-Xclang;-emit-pch;-Xclang;-include;-Xclang;/Users/duranr/Documents/Cnipe-Bot/build/libs/DPP/library/CMakeFiles/dpp.dir/cmake_pch_arm64.hxx;-x;c++-header
 

@@ -386,3 +386,4 @@ FodyWeavers.xsd
 
 # Cnipe Bot
 config.json
+/build

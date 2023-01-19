@@ -1,6 +1,6 @@
 CMakeFiles/discord-bot.dir/src/main.cpp.o: \
   /Users/duranr/Documents/Cnipe-Bot/src/main.cpp \
-  /Users/duranr/Documents/Cnipe-Bot/src/../libs/DPP/include/dpp/dpp.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/dpp.h \
   /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/export.h \
   /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/version.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string \
