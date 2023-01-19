@@ -11,3 +11,15 @@ This Bot was created to provide an interesting C++ learning exercise, as well as
 - [ ] Bot does not snipe messages from Users with certain roles (BOTS)
 - [ ] Snipe doesn't work when a user leaves the server (PFP Image Grabbing)
 - [ ] Reply Snipe (Attachment/Message Handling)
+
+# How to Build
+## Requirements 
+- Cmake (ver 3.15+)
+- C++ Compiler
+
+Run the commands:
+```ssh
+cmake -B ./build
+cmake --build ./build
+```
+then run .exe generated in ./build folder :).
