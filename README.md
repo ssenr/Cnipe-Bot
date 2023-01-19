@@ -50,3 +50,9 @@ brew link openssl --force
 ```
 
 which will force syslinks and will likely make the CMAKE build work.
+
+On WSL2 (Ubuntu Distro) run:
+
+``ssh
+sudo apt-get install libssl-dev
+```
