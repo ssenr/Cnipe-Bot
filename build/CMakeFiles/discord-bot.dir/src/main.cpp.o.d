@@ -1,13 +1,12 @@
 CMakeFiles/discord-bot.dir/src/main.cpp.o: \
   /Users/duranr/Documents/Cnipe-Bot/src/main.cpp \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream \
+  /Users/duranr/Documents/Cnipe-Bot/src/../libs/DPP/include/dpp/dpp.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/export.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/version.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config_site \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/pthread.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ios \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__locale \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__availability \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__debug \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iosfwd \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mbstate_t.h \
@@ -84,6 +83,7 @@ CMakeFiles/discord-bot.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/allocator_arg_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__memory/uses_allocator.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/exception \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__availability \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cstdlib \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stdlib.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/stdlib.h \
@@ -362,6 +362,16 @@ CMakeFiles/discord-bot.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/wctype.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/_types/_wctrans_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/is_transparent.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__node_handle \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/optional \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__tree \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/vector \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bit_reference \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/fstream \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__locale \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/mutex \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__mutex_base \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/system_error \
@@ -383,7 +393,7 @@ CMakeFiles/discord-bot.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/istream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/bitset \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bit_reference \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/locale \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/streambuf \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/nl_types.h \
@@ -413,4 +423,89 @@ CMakeFiles/discord-bot.dir/src/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/_types/_nl_item.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__bsd_locale_defaults.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/filesystem \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/stack \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iomanip \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/exception.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/snowflake.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/nlohmann/json_fwd.hpp \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/misc-enum.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/stringops.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/sstream \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/managed.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/utility.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/unordered_map \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__hash_table \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cmath \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/math.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/voicestate.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/json_interface.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/permissions.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/nlohmann/json.hpp \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/numeric \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/array \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/forward_list \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/valarray \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/clocale \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/role.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/guild.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/user.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/channel.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/message.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/queues.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/queue \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/thread \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/shared_mutex \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/condition_variable \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/invite.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/stage_instance.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/dtemplate.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/emoji.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/ban.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/prune.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/voiceregion.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/integration.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/webhook.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/presence.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/intents.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/appcommand.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/auditlog.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/application.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/scheduled_event.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/discordclient.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/wsclient.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/sslclient.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/socket.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/dispatcher.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/automod.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/event.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/cluster.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/timer.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/discordvoiceclient.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/fcntl.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/fcntl.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_o_sync.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_o_dsync.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_seek_set.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_s_ifmt.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/sys/_types/_filesec_t.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/csignal \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/signal.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/discordevents.h \
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/future \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/cache.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/sync.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/restresults.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/coro.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/event_router.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/cluster_sync_calls.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/httpsclient.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/commandhandler.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/once.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/colors.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/timed_listener.h \
+  /Users/duranr/Documents/Cnipe-Bot/libs/DPP/include/dpp/collector.h
