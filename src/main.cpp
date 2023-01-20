@@ -22,9 +22,9 @@ int main()
         }
     });
 
-    // bot.on_message_delete([&bot](const dpp::events::message_delete& event) {
-    //     std::cout<<"Message Deleted\n";
-    // });
+    bot.on_message_delete([&bot](const dpp::message_delete_t& event) {
+        bot.log(dpp::loglevel::ll_info, "Message Deleted");
+    });
  
     bot.start(dpp::st_wait);
 }
