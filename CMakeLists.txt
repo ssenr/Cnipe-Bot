@@ -1,7 +1,7 @@
 # minimum CMake version required
 cmake_minimum_required(VERSION 3.15)
 # Project name, version and description
-project(discord-bot VERSION 1.0 DESCRIPTION "A discord bot")
+project(cnipe-bot VERSION 1.0 DESCRIPTION "A Snipe Bot for Discord written in C(++)")
  
 # Add DPP as dependency
 add_subdirectory(libs/DPP)
@@ -22,6 +22,7 @@ target_link_libraries(${PROJECT_NAME}
 # Specify includes
 target_include_directories(${PROJECT_NAME} PRIVATE
     libs/DPP/include
+    src/headers
     # Remember to add the include directories of any other libraries too
 )
  

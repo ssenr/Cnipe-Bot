@@ -1,13 +1,10 @@
 #include <dpp/dpp.h>
 #include <dpp/nlohmann/json.hpp>
 #include <fstream>
-#include "headers/main.h"
-
-using json = nlohmann::json;
+#include <config.h>
 
 int main() 
 {
-    // Get Token
     const std::string bot_token = BOT_TOKEN;
 
     dpp::cluster bot(bot_token);
