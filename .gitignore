@@ -385,5 +385,6 @@ FodyWeavers.xsd
 *.sln.iml
 
 # Cnipe Bot
-config.json
-/build
+/build/
+/src/headers/
+/libs/

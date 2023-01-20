@@ -1,17 +1,14 @@
 #include <dpp/dpp.h>
 #include <dpp/nlohmann/json.hpp>
 #include <fstream>
+#include "headers/main.h"
 
 using json = nlohmann::json;
 
-int main() {
-
+int main() 
+{
     // Get Token
-    std::string s = "/Users/duranr/Documents/Cnipe-Bot/src/config.json";
-    std::ifstream i(s);
-    std::string current_path = std::filesystem::current_path().string()
-    json data = json::parse(i);
-    const std::string bot_token = data.at("token");
+    const std::string bot_token = BOT_TOKEN;
 
     dpp::cluster bot(bot_token);
  
