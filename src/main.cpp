@@ -1,7 +1,4 @@
-#include <dpp/dpp.h>
-#include <dpp/nlohmann/json.hpp>
-#include <fstream>
-#include <config.h>
+#include "main.h"
 
 int main() 
 {
@@ -24,6 +21,10 @@ int main()
             );
         }
     });
+
+    // bot.on_message_delete([&bot](const dpp::events::message_delete& event) {
+    //     std::cout<<"Message Deleted\n";
+    // });
  
     bot.start(dpp::st_wait);
 }
