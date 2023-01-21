@@ -4,9 +4,15 @@ namespace fs = std::filesystem;
 
 int main() 
 {
+    // Retrieve Token from Header
     const std::string bot_token = BOT_TOKEN;
-
-    dpp::cluster bot(bot_token);
+    
+    // Create Bot
+    uint64_t intents = dpp::i_default_intents | 
+                       dpp::i_message_content |
+                       dpp::i_guild_members;
+                       
+    dpp::cluster bot(bot_token, intents);
  
     bot.on_log(dpp::utility::cout_logger());
  
@@ -16,10 +22,9 @@ int main()
         }
     });
     
-    // https://dpp.dev/caching-messages.html
+    
     
     bot.on_ready([&bot](const dpp::ready_t& event) {
-        bot.log(dpp::loglevel::ll_info, fs::current_path());
         if (dpp::run_once<struct register_bot_commands>()) {
             
             // PING
@@ -62,8 +67,13 @@ int main()
         }
     });
 
+    bot.on_message_create([&bot] (const dpp::message_create_t& event) {
+        bot.log(dpp::loglevel::ll_info, event.msg.content);
+    });
+
     bot.on_message_delete([&bot](const dpp::message_delete_t& event) {
-        bot.log(dpp::loglevel::ll_info, event.deleted);
+        // log dereferenced pointer
+        bot.log(dpp::loglevel::ll_info, event.deleted->content);
     });
  
     bot.start(dpp::st_wait);
