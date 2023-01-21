@@ -11,7 +11,7 @@ int main()
     uint64_t intents = dpp::i_default_intents | 
                        dpp::i_message_content |
                        dpp::i_guild_members;
-                       
+
     dpp::cluster bot(bot_token, intents);
  
     bot.on_log(dpp::utility::cout_logger());
@@ -67,13 +67,21 @@ int main()
         }
     });
 
+    /*
+    * Sort by Discord Unique ID
+    */
+    
     bot.on_message_create([&bot] (const dpp::message_create_t& event) {
         bot.log(dpp::loglevel::ll_info, event.msg.content);
+        bot.log(dpp::loglevel::ll_info, "\n");
+        std::cout<<event.msg.id;
     });
 
     bot.on_message_delete([&bot](const dpp::message_delete_t& event) {
         // log dereferenced pointer
         bot.log(dpp::loglevel::ll_info, event.deleted->content);
+        bot.log(dpp::loglevel::ll_info, "\n");
+        std::cout<<event.deleted->id;
     });
  
     bot.start(dpp::st_wait);
