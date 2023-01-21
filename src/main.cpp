@@ -15,7 +15,9 @@ int main()
             event.reply("Pong!");
         }
     });
- 
+    
+    // https://dpp.dev/caching-messages.html
+    
     bot.on_ready([&bot](const dpp::ready_t& event) {
         bot.log(dpp::loglevel::ll_info, fs::current_path());
         if (dpp::run_once<struct register_bot_commands>()) {
@@ -61,7 +63,7 @@ int main()
     });
 
     bot.on_message_delete([&bot](const dpp::message_delete_t& event) {
-        bot.log(dpp::loglevel::ll_info, "Message Deleted");
+        bot.log(dpp::loglevel::ll_info, event.deleted);
     });
  
     bot.start(dpp::st_wait);
