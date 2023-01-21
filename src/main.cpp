@@ -83,6 +83,10 @@ int main()
         bot.log(dpp::loglevel::ll_info, "\n");
         std::cout<<event.deleted->id;
     });
+
+    bot.on_message_update([&bot] (const dpp::message_update_t& event) {
+        bot.log(dpp::loglevel::ll_info, event.msg.content);
+    });
  
     bot.start(dpp::st_wait);
 }
