@@ -53,6 +53,6 @@ which will force syslinks and will likely make the CMAKE build work.
 
 On WSL2 (Ubuntu Distro) run:
 
-``ssh
+```ssh
 sudo apt-get install libssl-dev
 ```
