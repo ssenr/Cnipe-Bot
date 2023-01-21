@@ -7,3 +7,7 @@
 #include <iostream>
 #include <filesystem>
 #include <sstream>
+#include <vector>
+#include <typeinfo>
+#include <stdio.h>
+#include <math.h>
