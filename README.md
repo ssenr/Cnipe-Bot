@@ -31,7 +31,22 @@ cmake --build ./build
 
 then run .exe generated in ./build folder :).
 
-## Git Conflicts
+# Cache/Database Structure
+```
+├── Cache (RAM)
+│   ├── Stores a large amount of messages
+|   ├── Uses messages struct in DPP
+|   └── Constantly managed to clean cache
+|
+├── message_delete (DB)
+│   └── Stores all deleted messages from cache (Found by ID)
+|
+├── message_update (DB)
+│   ├── Finds (old) message (by id) in Cache
+│   └── Stores old message, along with new message
+```
+
+# Git Conflicts
 
 In the case of pull conflicts such as divergent branches. Feel free to run the command
 
@@ -41,7 +56,7 @@ git config pull.rebase true
 
 This enables rebase on pulls. Rebase merges local unpublished changes with ones in the repository. However, with proper care you should not need to do this as long as you have aware and up to date.
 
-## OpenSSL Errors
+# OpenSSL Errors
 
 On Mac, with CMAKE you may run into an error in which OpenSS, specifically the root folder (or some modules) are not found. If you are using homebrew, run:
 
