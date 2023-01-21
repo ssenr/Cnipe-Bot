@@ -31,3 +31,6 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
+
+# Copy Resources
+# file(COPY "${CMAKE_SOURCE_DIR}/src/events" DESTINATION "${CMAKE_CURRENT_BINARY_DIR}")

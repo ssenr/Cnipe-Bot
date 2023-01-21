@@ -386,5 +386,5 @@ FodyWeavers.xsd
 
 # Cnipe Bot
 /build/
-/src/headers/
+/src/headers/config.h
 /libs/

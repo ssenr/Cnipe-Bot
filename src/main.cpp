@@ -1,5 +1,7 @@
 #include "main.h"
 
+namespace fs = std::filesystem;
+
 int main() 
 {
     const std::string bot_token = BOT_TOKEN;
@@ -15,9 +17,45 @@ int main()
     });
  
     bot.on_ready([&bot](const dpp::ready_t& event) {
+        bot.log(dpp::loglevel::ll_info, fs::current_path());
         if (dpp::run_once<struct register_bot_commands>()) {
+            
+            // PING
             bot.global_command_create(
-                dpp::slashcommand("ping", "Ping pong!", bot.me.id)
+                dpp::slashcommand(
+                    "ping", 
+                    "Ping pong!", 
+                    bot.me.id
+                )
+            );
+            
+            // SNIPE
+            // SNIPE WITH IMAGE IF ATTACHMENT
+            // INCLUDES A MESSAGE IF REPLY
+            bot.global_command_create(
+                dpp::slashcommand(
+                    "Snipe", 
+                    "Snipe a recently deleted message",
+                    bot.me.id
+                )
+            );
+
+            // EDIT SNIPE
+            bot.global_command_create(
+                dpp::slashcommand(
+                    "EditSnipe", 
+                    "Snipe a recently edited message",
+                    bot.me.id
+                )
+            );
+
+            // IMAGE SNIPE
+            bot.global_command_create(
+                dpp::slashcommand(
+                    "ImgSnipe", 
+                    "Snipe a recently deleted image",
+                    bot.me.id
+                )
             );
         }
     });

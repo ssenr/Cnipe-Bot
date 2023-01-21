@@ -3,3 +3,6 @@
 #include <dpp/nlohmann/json.hpp>
 #include <fstream>
 #include <config.h>
+#include <string>
+#include <iostream>
+#include <filesystem>
