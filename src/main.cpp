@@ -2,22 +2,25 @@
 
 int main() 
 {
-    // Retrieve Token from Header
+    /* Retrieve The Bot Token from Header */
     const std::string bot_token = BOT_TOKEN;
     
-    // Create Bot
+    /* Bot Intents */
     uint64_t intents = dpp::i_default_intents | 
                        dpp::i_message_content |
                        dpp::i_guild_members;
 
-    // Initialize Cluster
+    /* Initialize Cluster */
     dpp::cluster bot(bot_token, intents);
 
-    // Initialize Cache
+    /* Initialize Cache */
     dpp::cache<dpp::message> message_cache;
 
+    /* Log Event */
     bot.on_log(dpp::utility::cout_logger());
     
+    /* On Ready Event */
+    /* Initialize and Register Commands */
     bot.on_ready([&bot](const dpp::ready_t& event) 
     {
         if (dpp::run_once<struct register_bot_commands>()) {
@@ -71,8 +74,7 @@ int main()
             //     )
             // );
 
-            /* GET */
-            // Initialize
+            /* GET Command*/
             dpp::slashcommand get_message("Get", "Retrieves a message from Cache", bot.me.id);
             get_message.add_option(
                     dpp::command_option(dpp::co_string, "messageid", "Integer ID", true)
@@ -85,13 +87,11 @@ int main()
             bot.global_bulk_command_create(command_array);
         }
     });
-
-    /*
-    * Sort by Discord Unique ID
-    */
     
+    /* Handle Message Create Event */
     bot.on_message_create([&] (const dpp::message_create_t& event) 
     {
+        /* Create Pointer and store in Cache */
         dpp::message* message_ptr = new dpp::message();
         *message_ptr = event.msg;
         
@@ -101,8 +101,11 @@ int main()
         delete message_ptr;
     });
 
+    /* Handle Slash Command Event (User used /{command}) */
     bot.on_slashcommand([&](const dpp::slashcommand_t& event) 
     {
+        /* Get Command */
+        /* Retrieves Message from Cache based on Message ID Parameter */
          if (event.command.get_command_name() == "get") 
          {
             auto message_id = std::get<std::string>(event.get_parameter("messageid"));
@@ -119,14 +122,16 @@ int main()
         }
     });
 
+    /* Handle Message Delete Event */
     bot.on_message_delete([&bot](const dpp::message_delete_t& event) 
     {
-        // log dereferenced pointer
+        /* Log the Pointer (Dereferenced) */
         bot.log(dpp::loglevel::ll_info, event.deleted->content);
         bot.log(dpp::loglevel::ll_info, "\n");
         std::cout<<event.deleted->id;
     });
 
+    /* Handle Edit Message Event */
     bot.on_message_update([&bot] (const dpp::message_update_t& event) 
     {
         bot.log(dpp::loglevel::ll_info, event.msg.content);
