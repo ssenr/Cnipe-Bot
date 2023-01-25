@@ -14,3 +14,9 @@ dpp::slashcommand g_comm_test()
 
     return get_message;
 }
+
+dpp::slashcommand g_comm_test2() 
+{
+    dpp::slashcommand test("test", "does nothing", bot_id);
+    return test;
+}

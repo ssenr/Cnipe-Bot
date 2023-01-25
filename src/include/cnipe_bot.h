@@ -22,9 +22,9 @@ public:
     }
 
     /* Member Function to Add Command to List */
-    void add_command(dpp::slashcommand command)
+    void add_command(std::vector<dpp::slashcommand> commands)
     {
-        commands_array.push_back(command);
+        commands_array.insert(commands_array.end(), commands.begin(), commands.end());
     }
 
     /* Run Command for Bot */
