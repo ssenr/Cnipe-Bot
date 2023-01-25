@@ -16,12 +16,9 @@ private:
     std::vector<dpp::slashcommand> commands_array;
     dpp::cluster bot;
     dpp::cache<dpp::message> message_cache;
-    uint64_t intents = dpp::i_default_intents | 
-                       dpp::i_message_content |
-                       dpp::i_guild_members;
 public:
     /* Constructor */
-    cnipe_bot(std::string bot_token) : bot(bot_token, dpp::i_default_intents | dpp::i_message_content)
+    cnipe_bot(std::string bot_token, uint64_t intents) : bot(bot_token, intents)
     {
         /* Empty Constructor */
     }
