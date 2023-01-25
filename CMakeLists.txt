@@ -10,6 +10,7 @@ add_subdirectory(libs/DPP)
 # Create an executable
 add_executable(${PROJECT_NAME}
     src/main.cpp
+    src/commands.cpp
     # your other files...
 )
  
@@ -22,7 +23,7 @@ target_link_libraries(${PROJECT_NAME}
 # Specify includes
 target_include_directories(${PROJECT_NAME} PRIVATE
     libs/DPP/include
-    src/headers
+    src/include
     # Remember to add the include directories of any other libraries too
 )
  
