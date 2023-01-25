@@ -11,6 +11,7 @@ add_subdirectory(libs/DPP)
 add_executable(${PROJECT_NAME}
     src/main.cpp
     src/commands.cpp
+    src/events.cpp
     # your other files...
 )
  

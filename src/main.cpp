@@ -8,7 +8,6 @@ int main()
     /* Add Commands */
     bot.add_command({
         g_comm_test(),
-        g_comm_test2()
     });
 
     /* Start Bot */
