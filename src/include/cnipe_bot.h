@@ -8,6 +8,7 @@
 #include <iostream>
 #include <config.h>
 #include <events.h>
+#include <connector.h>
 
 class cnipe_bot
 {
@@ -35,6 +36,9 @@ public:
     {
         /* Initialize Logger Event */
         bot.on_log(dpp::utility::cout_logger());
+
+        /* Initialize DB */
+        conn_DB();
 
         /* Event Handling */
         e_message_create(bot,message_cache);
