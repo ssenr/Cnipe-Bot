@@ -37,10 +37,7 @@ public:
         bot.on_log(dpp::utility::cout_logger());
 
         /* Event Handling */
-        bot.on_message_create([&] (const dpp::message_create_t& event)
-        {
-            e_message_create(bot, message_cache, event);
-        });
+        e_message_create(bot,message_cache);
         
         /* On Ready Event */
         bot.on_ready([&](const dpp::ready_t& event)
