@@ -9,6 +9,7 @@
 #include <config.h>
 #include <events.h>
 #include <connector.h>
+#include <commands.h>
 
 class cnipe_bot
 {
@@ -19,16 +20,11 @@ private:
     dpp::cache<dpp::message> message_cache;
 public:
     /* Constructor */
-    cnipe_bot(std::string bot_token, uint64_t intents) : bot(bot_token, intents)
+    cnipe_bot() : bot(BOT_TOKEN, INTENTS)
     {
-        /* Empty Constructor */
-    }
-
-    /* Member Function to Add Command to List */
-    void add_command(std::vector<dpp::slashcommand> commands)
-    {
-        /* Research Usage */
-        commands_array.insert(commands_array.end(), commands.begin(), commands.end());
+        commands_array.push_back(
+            g_comm_test()
+        );
     }
 
     /* Run Command for Bot */
@@ -38,7 +34,7 @@ public:
         bot.on_log(dpp::utility::cout_logger());
 
         /* Initialize DB */
-        conn_DB();
+        // conn_DB();
 
         /* Event Handling */
         e_message_create(bot,message_cache);

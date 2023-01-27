@@ -9,21 +9,21 @@
 
 void conn_DB() 
 {
-    sql::mysql::MySQL_Driver *driver;
-    try
-    {
-        sql::Connection *conn;
-        sql::Statement *stmt;
-        sql::ResultSet *res;
-        sql::PreparedStatement *pstmt;
+    // sql::mysql::MySQL_Driver *driver;
+    // try
+    // {
+    //     sql::Connection *conn;
+    //     sql::Statement *stmt;
+    //     sql::ResultSet *res;
+    //     sql::PreparedStatement *pstmt;
 
-        /* Establish a Connection */
-        driver = get_driver_instance();
-        conn = driver->connect(CONN_STRING, USER_NAME, PASS_WORD);
-        std::cout << "Connected to database\n";
-    }
-    catch (int Age) 
-    {
-        std::cout<<"Cannot connect to database\n";
-    }
+    //     /* Establish a Connection */
+    //     driver = get_driver_instance();
+    //     conn = driver->connect(CONN_STRING, USER_NAME, PASS_WORD);
+    //     std::cout << "Connected to database\n";
+    // }
+    // catch (int Age) 
+    // {
+    //     std::cout<<"Cannot connect to database\n";
+    // }
 }
