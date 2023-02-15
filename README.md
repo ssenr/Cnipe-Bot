@@ -24,7 +24,7 @@ This Bot was created to provide an interesting C++ learning exercise, as well as
 
 Run the commands:
 
-```ssh
+```bash
 cmake -B ./build
 cmake --build ./build
 ```
@@ -46,28 +46,23 @@ then run .exe generated in ./build folder :).
 │   └── Stores old message, along with new message
 ```
 
-# Git Conflicts
-
-In the case of pull conflicts such as divergent branches. Feel free to run the command
-
-```ssh
-git config pull.rebase true
-```
-
-This enables rebase on pulls. Rebase merges local unpublished changes with ones in the repository. However, with proper care you should not need to do this as long as you have aware and up to date.
-
 # OpenSSL Errors
 
 On Mac, with CMAKE you may run into an error in which OpenSS, specifically the root folder (or some modules) are not found. If you are using homebrew, run:
 
-```ssh
+```bash
 brew link openssl --force
 ```
 
-which will force syslinks and will likely make the CMAKE build work.
+which will force a symlink and will likely make the CMAKE build work.
 
-On WSL2 (Ubuntu Distro) run:
+On Linux:
 
-```ssh
+```bash
 sudo apt-get install libssl-dev
+```
+substitute apt-get with any other package manager that is relevant. Or conversely,
+
+```bash
+ln -s <openssl path> <work folder>
 ```
