@@ -66,3 +66,4 @@ substitute apt-get with any other package manager that is relevant. Or conversel
 ```bash
 ln -s <openssl path> <work folder>
 ```
+to create a symlink yourself (linux/unix like systems).
