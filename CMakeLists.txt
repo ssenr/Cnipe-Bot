@@ -6,7 +6,7 @@ project(cnipe-bot VERSION 1.0 DESCRIPTION "A Snipe Bot for Discord written in C(
 # Add DPP as dependency
 add_subdirectory(
     libs/DPP
-    libs/mysql-connector-c++
+    libs/mysql-connector
 )
 # You can also add any other libs you want to use
  
@@ -30,7 +30,7 @@ target_link_libraries(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} PRIVATE
     libs/DPP/include
     src/include
-    libs/mysql-connector-c++/include
+    libs/mysql-connector/include
     # Remember to add the include directories of any other libraries too
 )
  
