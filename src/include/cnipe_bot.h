@@ -35,19 +35,10 @@ public:
         /* Initialize DB */
 
         /* Event Handling */
-        e_message_create(bot,message_cache);
+        e_message_create(bot, message_cache);
         
         /* Command Handling */ 
-        bot.on_slashcommand([&] (const dpp::slashcommand_t& event) {
-            if (event.command.get_command_name() == "Get")
-            {
-                auto param = event.get_parameter("messageid");
-                event.reply(
-                    dc_comm_test(param, message_cache)        
-                );
-            }
-
-        }); 
+        e_slashcommand_use(bot, message_cache);
 
         /* On Ready Event */
         bot.on_ready([&](const dpp::ready_t& event)

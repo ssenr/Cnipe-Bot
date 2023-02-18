@@ -16,7 +16,7 @@ dpp::slashcommand g_comm_test()
     return get_message;
 }
 
-std::string dc_comm_test(auto param, dpp::cache<dpp::message> message_cache)
+std::string dc_comm_test(std::string param, dpp::cache<dpp::message>& message_cache)
 {
     dpp::message* target_ptr = message_cache.find(param);
 

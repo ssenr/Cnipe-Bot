@@ -5,5 +5,6 @@
 #include <dpp/dpp.h>
 
 void e_message_create(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache);
+void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache);
 
 #endif 
