@@ -4,6 +4,9 @@ A C++ Rewrite of the Snipe-Bot I wrote about a year ago.
 
 [Original Snipe Bot](https://github.com/ssenr/Snipe-Bot)
 
+# TODO
+- [ ] Add a run script (bash)
+
 # Goals
 
 This Bot was created to provide an interesting C++ learning exercise, as well as provide significant improvements to my old code. Improvements and new features include:
