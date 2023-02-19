@@ -41,13 +41,7 @@ public:
         e_slashcommand_use(bot, message_cache);
 
         /* On Ready Event */
-        bot.on_ready([&](const dpp::ready_t& event)
-        {
-            if (dpp::run_once<struct register_bot_commands>())
-            {
-                bot.global_bulk_command_create(commands_array);
-            }
-        });
+        e_on_ready(bot, commands_array);
 
         /* Start Bot */
         bot.start(dpp::st_wait);

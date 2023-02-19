@@ -2,6 +2,7 @@
 #include <dpp/dpp.h>
 #include <commands.h>
 #include <string>
+#include <vector>
 
 /*
  * Add Master Event Handler
@@ -28,4 +29,12 @@ void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& message_cac
             event.reply(dc_comm_test(param, message_cache));
         }
     });
+}
+
+void e_on_ready(dpp::cluster& bot, std::vector<dpp::slashcommand> command_array)
+{
+    if (dpp::run_once<struct register_bot_commands>())
+    {
+        bot.global_bulk_command_create(command_array);
+    }
 }
