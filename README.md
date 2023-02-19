@@ -5,7 +5,7 @@ A C++ Rewrite of the Snipe-Bot I wrote about a year ago.
 [Original Snipe Bot](https://github.com/ssenr/Snipe-Bot)
 
 # TODO
-- [ ] Add a run script (bash)
+- [x] Add a run script (bash)
 
 # Goals
 
