@@ -1,12 +1,11 @@
+#include <cstdint>
 #include <events.h>
 #include <dpp/dpp.h>
 #include <commands.h>
 #include <string>
 #include <vector>
-
-/*
- * Add Master Event Handler
- */
+#include <iostream>
+#include <utils.h>
 
 void e_message_create(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache)
 {
@@ -38,3 +37,31 @@ void e_on_ready(dpp::cluster& bot, std::vector<dpp::slashcommand> command_array)
         bot.global_bulk_command_create(command_array);
     }
 }
+
+void e_message_delete(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache)
+{
+    bot.on_message_delete([&] (const dpp::message_delete_t& event)
+    {
+        /* Get Message ID of Deleted Message */
+        std::string message_id = std::to_string( (uint64_t) event.deleted->id );
+        // bot.log(dpp::loglevel::ll_info, message_id);
+        
+        /* Search Cache for deleted message */
+        dpp::message* message_ptr = search_cache(message_cache, message_id);
+
+        if (message_ptr != NULL)
+        {
+            bot.log(dpp::loglevel::ll_info, "The message had the following content: "
+            + message_ptr->content
+            );
+        }
+        else 
+        {
+            bot.log(dpp::loglevel::ll_error, "The message cannot be found within the cache");
+        }
+    });
+}
+
+
+
+

@@ -38,6 +38,7 @@ public:
 
         /* Event Handling */
         e_message_create(bot, message_cache);
+        e_message_delete(bot, message_cache);
         
         /* Command Handling */ 
         e_slashcommand_use(bot, message_cache);
