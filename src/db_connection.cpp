@@ -1,32 +1,29 @@
-#include "include/config.h"
-//#include <database.h>
+#include <database.h>
 #include <pqxx/pqxx>
-#include <iostream>
-//#include <config.h>
+#include <config.h>
 #include <string>
+#include <dpp/dpp.h>
 
-using namespace pqxx;
-
-int main() 
+void db_connect(dpp::cluster& bot)
 {
     try 
     {
-        connection C(CONN_STRING);
+        pqxx::connection C(CONN_STRING);
         if (C.is_open())
         {
-            std::cout << "Opened database successfully: " << C.dbname() << std::endl;
-
+           /*  std::cout << "Opened database successfully: " << C.dbname() << std::endl; */
+            bot.log(dpp::loglevel::ll_info, "Opened database successfully!");
         }
         else 
         {
-            std::cout << "Can't open database" << std::endl;
-            return 1;
+            /* std::cout << "Can't open database" << std::endl; */
+            bot.log(dpp::loglevel::ll_critical, "Cannot Open Database!");
         }
         C.close();
     }
     catch (const std::exception &e)
     {
-        std::cerr << e.what() << std::endl;
-        return 1;
+        /* std::cerr << e.what() << std::endl; */
+        bot.log(dpp::loglevel::ll_error, e.what());
     }
 }

@@ -9,6 +9,7 @@
 #include <config.h>
 #include <events.h>
 #include <commands.h>
+#include <database.h>
 
 class cnipe_bot
 {
@@ -29,10 +30,11 @@ public:
     /* Run Command for Bot */
     void run() 
     {
-        /* Initialize Logger Event */
+        /* Initialize Logger */
         bot.on_log(dpp::utility::cout_logger());
 
         /* Initialize DB */
+        db_connect(bot);
 
         /* Event Handling */
         e_message_create(bot, message_cache);

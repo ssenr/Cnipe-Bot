@@ -1,7 +1,9 @@
 #pragma once
-#ifndef DATABASE
-#define DATABASE
+#ifndef DATABASE_H
+#define DATABASE_H
 
-int db_connect();
+#include <dpp/dpp.h>
+
+void db_connect(dpp::cluster& bot);
 
 #endif
