@@ -1,3 +1,6 @@
 [submodule "libs/DPP"]
 	path = libs/DPP
 	url = https://github.com/brainboxdotcc/DPP
+[submodule "libs/libpqxx"]
+	path = libs/libpqxx
+	url = https://github.com/jtv/libpqxx
