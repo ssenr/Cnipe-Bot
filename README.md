@@ -15,6 +15,7 @@ This Bot was created to provide an interesting C++ learning exercise, as well as
 -   [ ] Snipe doesn't work when a user leaves the server (PFP Image Grabbing)
 -   [ ] Reply Snipe (Attachment/Message Handling)
 -   [ ] Make a blog post
+-   [ ] Commands register themselves via cluster.global_command_create(); method
 
 # How to Build
 
