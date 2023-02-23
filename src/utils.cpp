@@ -53,9 +53,8 @@ bool compare_ptr(dpp::message* a, dpp::message* b)
 
 void manage_cache(dpp::cache<dpp::message> &message_cache)
 {
-    /* Vars */
+    /* Message Pointer Array */
     std::vector<dpp::message*> arr_rmv;
-    uint64_t total = 0;
 
     /* Scope for Iterating Through Cache */
     {
@@ -65,7 +64,6 @@ void manage_cache(dpp::cache<dpp::message> &message_cache)
         for (auto i = mc_container.begin(); i != mc_container.end(); i++)
         {
             dpp::message* mp = (dpp::message*)i->second;
-            total++;
             arr_rmv.insert(arr_rmv.begin(), mp);
         }
     }
