@@ -22,9 +22,12 @@ public:
     /* Constructor */
     cnipe_bot() : bot(BOT_TOKEN, INTENTS)
     {
-        commands_array.push_back(
-            g_comm_test()
-        );
+        commands_array.insert(commands_array.end(), {
+           g_comm_cache_size(),
+           g_comm_cache_count(),
+           g_comm_cache_iterate(),
+           g_comm_test()
+        });
     }
 
     /* Run Command for Bot */

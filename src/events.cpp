@@ -1,5 +1,3 @@
-#include "include/events.h"
-#include "dispatcher.h"
 #include <cstdint>
 #include <events.h>
 #include <dpp/dpp.h>
@@ -29,6 +27,18 @@ void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& message_cac
             std::string param = std::get<std::string>(event.get_parameter("messageid"));
             event.reply(dc_comm_test(param, message_cache));
         }
+        else if (event.command.get_command_name() == "cachesize")
+        {
+            event.reply(dc_comm_cache_size(message_cache));
+        }
+        else if (event.command.get_command_name() == "cachecount")
+        {
+            event.reply(dc_comm_cache_count(message_cache));
+        }
+        else if (event.command.get_command_name() == "iterate")
+        {
+            event.reply(dc_comm_cache_iterate(message_cache));
+        }
     });
 }
 
@@ -45,7 +55,7 @@ void e_message_delete(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache
     bot.on_message_delete([&] (const dpp::message_delete_t& event)
     {
         /* Get Message ID of Deleted Message */
-        std::string message_id = std::to_string( (uint64_t) event.deleted->id );
+        std::string message_id = std::to_string( event.deleted->id );
         // bot.log(dpp::loglevel::ll_info, message_id);
         
         /* Search Cache for deleted message */
