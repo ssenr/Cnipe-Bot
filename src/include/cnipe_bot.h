@@ -25,7 +25,6 @@ public:
         commands_array.insert(commands_array.end(), {
            g_comm_cache_size(),
            g_comm_cache_count(),
-           g_comm_cache_iterate(),
            g_comm_test()
         });
     }

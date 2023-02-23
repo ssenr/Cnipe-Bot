@@ -30,12 +30,6 @@ dpp::slashcommand g_comm_cache_count()
     return cache_count;
 }
 
-dpp::slashcommand g_comm_cache_iterate()
-{
-    dpp::slashcommand cache_count("Iterate", "Iterates through cache (test)", bot_id);
-    return cache_count;
-}
-
 /* Define Commands */
 std::string dc_comm_test(std::string param, dpp::cache<dpp::message>& message_cache)
 {
@@ -67,11 +61,3 @@ std::string dc_comm_cache_count(dpp::cache<dpp::message> &message_cache)
     std::string fmt_item_count = "There are currently " + item_count + " messages stored.";
     return fmt_item_count;
 }
-
-std::string dc_comm_cache_iterate(dpp::cache<dpp::message>& message_cache)
-{
-    /* Check Cache Iteration */
-    std::string iteration = std::to_string(manage_cache(message_cache));
-    return iteration;
-}
-

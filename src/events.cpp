@@ -11,10 +11,16 @@ void e_message_create(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache
 {
     bot.on_message_create([&] (const dpp::message_create_t& event)
     {
-        dpp::message* message_ptr = new dpp::message();
-        *message_ptr = event.msg;
+        bool cond = has_bot_role(event.msg);
+        if (cond == false) 
+        {
+            dpp::message* message_ptr = new dpp::message();
+            *message_ptr = event.msg;
 
-        message_cache.store(message_ptr);
+            message_cache.store(message_ptr);
+        }
+
+        manage_cache(message_cache);
     });
 }
 
@@ -34,10 +40,6 @@ void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& message_cac
         else if (event.command.get_command_name() == "cachecount")
         {
             event.reply(dc_comm_cache_count(message_cache));
-        }
-        else if (event.command.get_command_name() == "iterate")
-        {
-            event.reply(dc_comm_cache_iterate(message_cache));
         }
     });
 }
