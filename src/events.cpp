@@ -1,3 +1,5 @@
+#include "include/events.h"
+#include "dispatcher.h"
 #include <cstdint>
 #include <events.h>
 #include <dpp/dpp.h>
@@ -60,6 +62,18 @@ void e_message_delete(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache
             bot.log(dpp::loglevel::ll_error, "The message cannot be found within the cache");
         }
     });
+}
+
+void e_message_update(dpp::cluster &bot, dpp::cache<dpp::message> &message_cache)
+{
+    // Store in Postgres DB
+    // bot.on_message_update([&] (const dpp::message_update_t& event)
+    // {
+    //     dpp::message* message_ptr = new dpp::message();
+    //     *message_ptr = event.msg; 
+    //
+    //     message_cache.store(message_ptr);
+    // });
 }
 
 

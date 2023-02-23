@@ -6,8 +6,9 @@
 #include <vector>
 
 void e_message_create(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache);
+void e_message_delete(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache);
+void e_message_update(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache);
 void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache);
 void e_on_ready(dpp::cluster& bot, std::vector<dpp::slashcommand> command_array);
-void e_message_delete(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache);
 
 #endif 
