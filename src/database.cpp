@@ -4,6 +4,10 @@
 #include <string>
 #include <dpp/dpp.h>
 
+/* Forward Declarations */
+std::string message_delete_table();
+
+/* Creating a Custom Datatype */
 void db_connect(dpp::cluster& bot)
 {
     try 
@@ -26,4 +30,16 @@ void db_connect(dpp::cluster& bot)
         /* std::cerr << e.what() << std::endl; */
         bot.log(dpp::loglevel::ll_error, e.what());
     }
+}
+
+/* Message Delete Schema */
+std::string message_delete_table()
+{
+    table = "CREATE TABLE MESSAGE_DELETE(" \
+             "ID            INT         PRIMARY KEY    NOT NULL," \
+             "CHANNEL_ID    CHAR(64)," \
+             "GUILD_ID      CHAR(64)." \
+             "";
+
+    return table;
 }

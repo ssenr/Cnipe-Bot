@@ -20,6 +20,8 @@ void e_message_create(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache
             message_cache.store(message_ptr);
         }
 
+        /* May be called too much esp in an active server */ 
+        /* Check Performance */
         manage_cache(message_cache);
     });
 }
@@ -87,7 +89,4 @@ void e_message_update(dpp::cluster &bot, dpp::cache<dpp::message> &message_cache
     //     message_cache.store(message_ptr);
     // });
 }
-
-
-
 
