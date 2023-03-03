@@ -1,10 +1,14 @@
+/**
+ *  The Main File
+ *  Using the cnipe_bot.h header, a new bot object is created
+ *  .run() method is called to start the bot
+ */
+
 #include <cnipe_bot.h>
 
 int main() 
 {
-    /* Create Bot Object [cnipe_bot] */
-    cnipe_bot bot;
+    cnipe_bot bot; /**< The Bot Object */
     
-    /* Start Bot */
-    bot.run();
+    bot.run(); /**< Start the bot */
 }

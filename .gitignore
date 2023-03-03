@@ -3,3 +3,6 @@
 /libs
 .cache/
 important_info_postgres
+latex/
+html/
+

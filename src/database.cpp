@@ -35,11 +35,13 @@ void db_connect(dpp::cluster& bot)
 /* Message Delete Schema */
 std::string message_delete_table()
 {
-    table = "CREATE TABLE MESSAGE_DELETE(" \
-             "ID            INT         PRIMARY KEY    NOT NULL," \
+    table = "CREATE TABLE IF NOT EXISTS MESSAGE_DELETE(" \
+             "ID            INT         PRIMARY KEY     NOT NULL," \
              "CHANNEL_ID    CHAR(64)," \
-             "GUILD_ID      CHAR(64)." \
-             "";
+             "GUILD_ID      CHAR(64)                    NOTNULL," \
+             "TRUE_NAME     VARCHAR(255)                NOT NULL," \
+             ""
+             ");";
 
     return table;
 }

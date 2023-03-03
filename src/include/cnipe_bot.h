@@ -1,3 +1,10 @@
+/**
+ *  The Cnipe_Bot Header File
+ *  This header controls all the initialization of the various utilities the bot needs to function
+ *  ex. Command handling, Cache Management, Log Management etc.
+ *  No explicit logic is used here, however the class, especially the .run() method is how the bot is used.
+ */
+
 #pragma once
 #ifndef CNIPE_BOT_H
 #define CNIPE_BOT_H
@@ -14,7 +21,6 @@
 class cnipe_bot
 {
 private:
-    /* Member Variables */
     std::vector<dpp::slashcommand> commands_array;
     dpp::cluster bot;
     dpp::cache<dpp::message> message_cache;
@@ -32,7 +38,9 @@ public:
     /* Run Command for Bot */
     void run() 
     {
-        /* Initialize Logger */
+        /**
+         * @param standard output for dpp cluster
+         */
         bot.on_log(dpp::utility::cout_logger());
 
         /* Initialize DB */
