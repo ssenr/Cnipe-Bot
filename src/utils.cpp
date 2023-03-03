@@ -1,17 +1,14 @@
 #include <cstddef>
 #include <config.h>
 #include <cstdint>
-#include <cstdio>
 #include <dpp/dpp.h>
 #include <string>
 #include <unordered_map>
 #include <utils.h>
-#include <shared_mutex>
 #include <vector>
-#include <iostream>
 #include <algorithm>
 
-dpp::message* search_cache(dpp::cache<dpp::message>& message_cache, std::string message_id)
+dpp::message* search_cache(dpp::cache<dpp::message>& message_cache, const std::string& message_id)
 {
     dpp::message* target_ptr = message_cache.find(message_id);
     return (target_ptr);
@@ -55,9 +52,9 @@ void manage_cache(dpp::cache<dpp::message> &message_cache)
         std::unordered_map<dpp::snowflake, dpp::message*>& mc_container = message_cache.get_container();
         std::shared_lock l(message_cache.get_mutex());
 
-        for (auto i = mc_container.begin(); i != mc_container.end(); i++)
+        for (auto & i : mc_container)
         {
-            dpp::message* mp = (dpp::message*)i->second;
+            auto* mp = (dpp::message*)i.second;
             arr_rmv.insert(arr_rmv.begin(), mp);
         }
     }

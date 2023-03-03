@@ -5,4 +5,5 @@
 important_info_postgres
 latex/
 html/
-
+.idea/
+.vscode/

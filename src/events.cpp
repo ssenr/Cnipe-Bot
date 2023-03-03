@@ -12,16 +12,14 @@ void e_message_create(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache
     bot.on_message_create([&] (const dpp::message_create_t& event)
     {
         bool cond = has_bot_role(event.msg);
-        if (cond == false) 
+        if (!cond)
         {
-            dpp::message* message_ptr = new dpp::message();
+            auto* message_ptr = new dpp::message();
             *message_ptr = event.msg;
 
             message_cache.store(message_ptr);
         }
 
-        /* May be called too much esp in an active server */ 
-        /* Check Performance */
         manage_cache(message_cache);
     });
 }
@@ -46,7 +44,7 @@ void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& message_cac
     });
 }
 
-void e_on_ready(dpp::cluster& bot, std::vector<dpp::slashcommand> command_array)
+void e_on_ready(dpp::cluster& bot, const std::vector<dpp::slashcommand>& command_array)
 {
     if (dpp::run_once<struct register_bot_commands>())
     {
@@ -58,14 +56,11 @@ void e_message_delete(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache
 {
     bot.on_message_delete([&] (const dpp::message_delete_t& event)
     {
-        /* Get Message ID of Deleted Message */
         std::string message_id = std::to_string( event.deleted->id );
-        // bot.log(dpp::loglevel::ll_info, message_id);
         
-        /* Search Cache for deleted message */
         dpp::message* message_ptr = search_cache(message_cache, message_id);
 
-        if (message_ptr != NULL)
+        if (message_ptr != nullptr)
         {
             bot.log(dpp::loglevel::ll_info, "The message had the following content: "
             + message_ptr->content
@@ -80,13 +75,5 @@ void e_message_delete(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache
 
 void e_message_update(dpp::cluster &bot, dpp::cache<dpp::message> &message_cache)
 {
-    // Store in Postgres DB
-    // bot.on_message_update([&] (const dpp::message_update_t& event)
-    // {
-    //     dpp::message* message_ptr = new dpp::message();
-    //     *message_ptr = event.msg; 
-    //
-    //     message_cache.store(message_ptr);
-    // });
-}
 
+}

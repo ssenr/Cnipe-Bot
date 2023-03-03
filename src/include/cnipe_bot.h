@@ -10,7 +10,6 @@
 #include <config.h>
 #include <events.h>
 #include <commands.h>
-#include <database.h>
 
 class cnipe_bot
 {

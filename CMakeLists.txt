@@ -12,7 +12,6 @@ add_subdirectory(
 # Create an executable
 add_executable(${PROJECT_NAME}
     src/utils.cpp
-    src/database.cpp
     src/commands.cpp
     src/events.cpp
     src/main.cpp

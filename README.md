@@ -38,7 +38,8 @@ then run .exe generated in ./build folder :).
 │   ├── Stores All Messages Sent In A Server
 │   └── Multi-threaded for cache cleaning purposes
 ├── message_edit_cache
-│
+│   ├── Retries Message Object From message_delete_cache with ID
+│   └── Multi-threaded for cache cleaning purposes
 ```
 
 # OpenSSL Errors
