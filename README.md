@@ -34,17 +34,11 @@ then run .exe generated in ./build folder :).
 
 # Cache/Database Structure
 ```
-├── Cache (RAM)
-│   ├── Stores a large amount of messages
-|   ├── Uses messages struct in DPP
-|   └── Constantly managed to clean cache
-|
-├── message_delete (DB)
-│   └── Stores all deleted messages from cache (Found by ID)
-|
-├── message_update (DB)
-│   ├── Finds (old) message (by id) in Cache
-│   └── Stores old message, along with new message
+├── message_delete_cache
+│   ├── Stores All Messages Sent In A Server
+│   └── Multi-threaded for cache cleaning purposes
+├── message_edit_cache
+│
 ```
 
 # OpenSSL Errors

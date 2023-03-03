@@ -42,10 +42,6 @@ bool has_bot_role(const dpp::message& msg)
     return false;
 }
 
-/* Comparing Casted ID is more accurate than Sent Timestamp */
-/* Off by One Errors */
-/* ID Increments whereas it is possible that two messages could be sent at the same time */
-/* Optimization (probably) removes all off by one errors due to incrementation */
 bool compare_ptr(dpp::message* a, dpp::message* b) 
 {
     return ( (uint64_t) a->id < (uint64_t) b->id );
@@ -53,10 +49,8 @@ bool compare_ptr(dpp::message* a, dpp::message* b)
 
 void manage_cache(dpp::cache<dpp::message> &message_cache)
 {
-    /* Message Pointer Array */
     std::vector<dpp::message*> arr_rmv;
 
-    /* Scope for Iterating Through Cache */
     {
         std::unordered_map<dpp::snowflake, dpp::message*>& mc_container = message_cache.get_container();
         std::shared_lock l(message_cache.get_mutex());
@@ -68,10 +62,8 @@ void manage_cache(dpp::cache<dpp::message> &message_cache)
         }
     }
 
-    /* Sort List by ID */
     std::sort(arr_rmv.begin(), arr_rmv.end(), compare_ptr);
     
-    /* Conditions for Message Removal */
     size_t max_items = 5;
     int remove_amount = 2;
 
