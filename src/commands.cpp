@@ -80,10 +80,23 @@ std::string dc_comm_queue_size(std::vector<uint64_t>& vec)
 
 std::string dc_comm_edit_snipe(std::vector<uint64_t>& update_queue,dpp::cache<dpp::message>& delete_cache, dpp::cache<dpp::message>& update_cache)
 {
-    std::string message_id = std::to_string(update_queue[0]);
+    if (update_queue.size() > 0)
+    {
+        std::string message_id = std::to_string(update_queue[0]);
+        dpp::message* old_message = search_cache(delete_cache, message_id);
+        dpp::message* new_message = search_cache(update_cache, message_id);
 
-    dpp::message* old_message = search_cache(delete_cache, message_id);
-    dpp::message* new_message = search_cache(update_cache, message_id);
-
-    return "Old Message: " + old_message->content + " New Message: " + new_message->content;
+        if (old_message != nullptr && new_message != nullptr)
+        {            
+            return "Old Message: " + old_message->content + " New Message: " + new_message->content;
+        }
+        else 
+        {
+            return "null";
+        }
+    }
+    else 
+    {
+        return "null";
+    }
 }
