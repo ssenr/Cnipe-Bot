@@ -27,7 +27,8 @@ public:
            g_comm_cache_size(),
            g_comm_cache_count(),
            g_comm_test(),
-           g_comm_queue_size()
+           g_comm_queue_size(),
+           g_comm_edit_snipe()
         });
     }
 
@@ -39,7 +40,7 @@ public:
         e_message_delete(bot, message_delete_cache);
         e_message_update(bot, message_update_cache, update_queue);
 
-        e_slashcommand_use(bot, message_delete_cache, delete_queue, update_queue);
+        e_slashcommand_use(bot, message_delete_cache, message_update_cache, delete_queue, update_queue);
 
         e_on_ready(bot, commands_array);
 

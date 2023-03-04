@@ -24,22 +24,22 @@ void e_message_create(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache
     });
 }
 
-void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& message_cache, std::vector<uint64_t>& delete_queue, std::vector<uint64_t>& update_queue)
+void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& delete_cache, dpp::cache<dpp::message>& update_cache ,std::vector<uint64_t>& delete_queue, std::vector<uint64_t>& update_queue)
 {
     bot.on_slashcommand([&] (const dpp::slashcommand_t& event) 
     {
         if (event.command.get_command_name() == "get")
         {
             std::string param = std::get<std::string>(event.get_parameter("messageid"));
-            event.reply(dc_comm_test(param, message_cache));
+            event.reply(dc_comm_test(param, delete_cache));
         }
         else if (event.command.get_command_name() == "cachesize")
         {
-            event.reply(dc_comm_cache_size(message_cache));
+            event.reply(dc_comm_cache_size(delete_cache));
         }
         else if (event.command.get_command_name() == "cachecount")
         {
-            event.reply(dc_comm_cache_count(message_cache));
+            event.reply(dc_comm_cache_count(delete_cache));
         }
         else if (event.command.get_command_name() == "queuesize")
         {
@@ -54,6 +54,10 @@ void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& message_cac
                 event.reply(dc_comm_queue_size(update_queue));
             }
 
+        }
+        else if (event.command.get_command_name() == "editsnipe")
+        {
+            event.reply(dc_comm_edit_snipe(delete_queue, delete_cache, update_cache));
         }
     });
 }

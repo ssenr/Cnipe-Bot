@@ -38,6 +38,12 @@ dpp::slashcommand g_comm_queue_size()
     return queue_size;
 }
 
+dpp::slashcommand g_comm_edit_snipe()
+{
+    dpp::slashcommand edit_snipe("EditSnipe", "Snipes the most recently edited message", bot_id);
+    return edit_snipe;
+}
+
 std::string dc_comm_test(const std::string& param, dpp::cache<dpp::message>& message_cache)
 {
     dpp::message* target_ptr = message_cache.find(param);
@@ -70,4 +76,14 @@ std::string dc_comm_cache_count(dpp::cache<dpp::message> &message_cache)
 std::string dc_comm_queue_size(std::vector<uint64_t>& vec)
 {
     return std::to_string(queue_size(vec));
+}
+
+std::string dc_comm_edit_snipe(std::vector<uint64_t>& update_queue,dpp::cache<dpp::message>& delete_cache, dpp::cache<dpp::message>& update_cache)
+{
+    std::string message_id = std::to_string(update_queue[0]);
+
+    dpp::message* old_message = search_cache(delete_cache, message_id);
+    dpp::message* new_message = search_cache(update_cache, message_id);
+
+    return "Old Message: " + old_message->content + " New Message: " + new_message->content;
 }
