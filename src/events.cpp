@@ -57,7 +57,7 @@ void e_slashcommand_use(dpp::cluster& bot, dpp::cache<dpp::message>& delete_cach
         }
         else if (event.command.get_command_name() == "editsnipe")
         {
-            event.reply(dc_comm_edit_snipe(delete_queue, delete_cache, update_cache));
+            event.reply(dc_comm_edit_snipe(update_queue, delete_cache, update_cache));
         }
     });
 }
