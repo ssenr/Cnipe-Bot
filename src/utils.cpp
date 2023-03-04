@@ -72,3 +72,8 @@ void manage_cache(dpp::cache<dpp::message> &message_cache)
         }
     }
 }
+
+int queue_size(std::vector<uint64_t>& vec)
+{
+    return vec.size();
+}

@@ -3,6 +3,7 @@
 #include <dpp/dpp.h>
 #include <iostream>
 #include <string>
+#include <vector>
 #include <utils.h>
 
 uint64_t bot_id = BOT_ID;
@@ -26,6 +27,15 @@ dpp::slashcommand g_comm_cache_count()
 {
     dpp::slashcommand cache_count("CacheCount", "Returns the number of items in cache", bot_id);
     return cache_count;
+}
+
+dpp::slashcommand g_comm_queue_size()
+{
+    dpp::slashcommand queue_size("QueueSize", "Returns size of the snipe queue", bot_id);
+    queue_size.add_option(
+        dpp::command_option(dpp::co_boolean, "vector", "True -> Delete", true)
+    );
+    return queue_size;
 }
 
 std::string dc_comm_test(const std::string& param, dpp::cache<dpp::message>& message_cache)
@@ -55,4 +65,9 @@ std::string dc_comm_cache_count(dpp::cache<dpp::message> &message_cache)
     std::string item_count = std::to_string(items_in_cache(message_cache));
     std::string fmt_item_count = "There are currently " + item_count + " messages stored.";
     return fmt_item_count;
+}
+
+std::string dc_comm_queue_size(std::vector<uint64_t>& vec)
+{
+    return std::to_string(queue_size(vec));
 }
