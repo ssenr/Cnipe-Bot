@@ -44,25 +44,3 @@ then run .exe generated in ./build folder :).
 │   ├── Retries Message Object From message_delete_cache with ID
 │   └── Multi-threaded for cache cleaning purposes
 ```
-
-# OpenSSL Errors
-
-On Mac, with CMAKE you may run into an error in which OpenSS, specifically the root folder (or some modules) are not found. If you are using homebrew, run:
-
-```bash
-brew link openssl --force
-```
-
-which will force a symlink and will likely make the CMAKE build work.
-
-On Linux:
-
-```bash
-sudo apt-get install libssl-dev
-```
-substitute apt-get with any other package manager that is relevant. Or conversely,
-
-```bash
-ln -s <openssl path> <work folder>
-```
-to create a symlink yourself (linux/unix like systems).
