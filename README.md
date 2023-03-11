@@ -20,6 +20,11 @@ This Bot was created to provide an interesting C++ learning exercise, as well as
 -   [ ] Make a blog post
 
 # How to Build
+## Cloning
+Clone with submodules by doing the following
+```bash
+git clone --recurse-submodules https://github.com/ssenr/Cnipe-Bot
+```
 
 ## Requirements
 
