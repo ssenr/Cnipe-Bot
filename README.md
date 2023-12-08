@@ -19,10 +19,16 @@ This Bot was created to provide an interesting C++ learning exercise, as well as
 -   [ ] Make a blog post
 
 # Compilation
-Using g++ 
-```bash 
-g++ ./src/main.cpp -o cnipe-bot -ldpp
+Using CMake:
 ```
+./build.sh
+# or 
+./clean-build.sh
+```
+Only difference in scripts being clean-build.sh will remove all contents and force Cmake to make a new build configuration (Which may resolve some errors or weird behaviour).
+# Resources
+
+[SQLite3](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04)
 
 # Cache/Database Structure
 ```
