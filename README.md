@@ -5,6 +5,7 @@ A C++ Rewrite of the Snipe-Bot I wrote about a year or two ago.
 
 # To Do
 
+-   [ ] (Possibly) switch from Macro to type declaration if more things are required in config.h header
 # Goals
 
 This Bot was created to provide an interesting C++ learning exercise, as well as provide significant improvements to my old code. Improvements and new features include:
@@ -20,8 +21,7 @@ This Bot was created to provide an interesting C++ learning exercise, as well as
 # Compilation
 Using g++ 
 ```bash 
-cd ./src
-g++ main.cpp -o main.cpp -ldpp
+g++ ./src/main.cpp -o cnipe-bot -ldpp
 ```
 
 # Cache/Database Structure

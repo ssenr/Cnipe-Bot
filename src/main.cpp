@@ -1,11 +1,22 @@
 #include <dpp/dpp.h>
 #include "headers/config.h"
 
-const std::string BOT_TOKEN = BOT_TOKEN_H;
-
 int main()
 {
+    const std::string BOT_TOKEN = BOT_TOKEN_H;
     dpp::cluster bot(BOT_TOKEN);
+
+    const dpp::snowflake BOT_ID = bot.me.id; 
+
+    dpp::slashcommand ping("ping", "Ping pong!", BOT_ID);
+
+    std::vector<dpp::slashcommand> slashcommand_list = {ping};
+
+    const auto register_commands = [&bot, &slashcommand_list](const dpp::ready_t& event) {
+        if (dpp::run_once<struct register_bot_commands>()) {
+            bot.global_bulk_command_create(slashcommand_list);
+        }
+    };
 
     bot.on_log(dpp::utility::cout_logger());
 
@@ -16,12 +27,7 @@ int main()
         }
     });
 
-    bot.on_ready([&bot] (const dpp::ready_t& event) {
-        if (dpp::run_once<struct register_bot_commands>())
-        {
-            bot.global_command_create(dpp::slashcommand("ping", "Ping pong!", bot.me.id));
-        }
-    });
+    bot.on_ready(register_commands);
 
     bot.start(dpp::st_wait);
 }
