@@ -1,12 +1,28 @@
 #include <dpp/dpp.h>
 #include "include/Config.h"
+#include <SQLiteCpp/SQLiteCpp.h>
 
 /**
  *  TRACKING:
  *  Droplet Specs
  *  1 GB Memory - 1 Intel VCPU - 25 GB SSD 
  *  Note: DPP won't have as big of a memory footprint
-**/
+ **/
+
+namespace snipe_database 
+{
+    void database_connect()
+    {
+        try 
+        {
+            SQLite::Database db("sharks.db", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);                
+        }
+        catch (const std::exception&) 
+        {
+        }
+        remove("sharks.db");
+    }
+}
 
 int main()
 {
@@ -33,7 +49,8 @@ int main()
     {
         if (event.command.get_command_name() == "ping") 
         {
-            event.reply("Pong!");
+            snipe_database::database_connect();
+            event.reply("Ping");
         }
     });
 
