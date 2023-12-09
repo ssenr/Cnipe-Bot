@@ -1,5 +1,5 @@
 #include <dpp/dpp.h>
-#include "headers/config.h"
+#include "headers/Config.h"
 
 /**
  *  TRACKING:
