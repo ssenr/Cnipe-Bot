@@ -1,5 +1,4 @@
 #ifndef CONFIG_H
 
-#define BOT_TOKEN_H "MTA2NTAzNjI1MjQxNzYzNDM3NA.GgshBN.nGf04w9VkpHL1O416a3BnzAoDoG1OimUWAqoRY"
-
+#define BOT_TOKEN_H "MTA2NTAzNjI1MjQxNzYzNDM3NA.GhMm5g.BKrlHxUYSny46GsG-OaM-7Z9_i_7DzjYavkDRI" 
 #endif 
