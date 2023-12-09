@@ -8,13 +8,16 @@ add_executable(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     dpp
+    SQLiteCpp
+    sqlite3
+    pthread
+    dl
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
     src/headers
+    src/SQLiteCpp/include/SQLiteCpp
 )
-
-
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_STANDARD 17

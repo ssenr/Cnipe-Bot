@@ -6,5 +6,5 @@ if [[ ! -d "$dir_path" ]]; then
     mkdir ./build 
 fi
 cmake -B ./build 
-cmale --build ./build 
+cmake --build ./build 
 ./build/cnipe-bot
