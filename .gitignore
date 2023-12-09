@@ -1,3 +1,3 @@
-src/headers/Config.h
+src/include/Config.h
 src/cnipe-bot
 build/
