@@ -36,7 +36,7 @@ int main()
 {
   /** INIT **/
   // Cluster
-  const std::string BOT_TOKEN = BOT_TOKEN_H;
+  const std::string BOT_TOKEN(BOT_TOKEN_H);
   dpp::cluster bot(BOT_TOKEN, BOT_INTENTS);
 
   // Database
