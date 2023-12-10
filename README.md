@@ -5,9 +5,13 @@ A (Possible Over-engineered) C++ Rewrite of the Snipe-Bot I wrote about a year o
 
 # To Do
 
--   [ ] Possibly switch from Macro to type declaration if more things are required in config.h header
+-   [x] Possibly switch from Macro to type declaration if more things are required in config.h header
 -   [x] Connect to local SQLite database
--   [ ] Cache Messages with dpp::cache
+-   [x] Cache Messages with dpp::cache 
+-   [ ] Replace replicate dpp::message datatype in SQL 
+-   [ ] Store every created message in SQL 
+-   [ ] Store every deleted message in SQL 
+-   [ ] Measure the disk sizes of the database vs cache 
 -   [ ] Create a general "garbage collector" that handles functionality or checking size and removing elements from cache
 -   [ ] Store cached messages in local database
 -   [ ] Extend "garbage collector" to SQLite3
