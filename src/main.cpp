@@ -1,6 +1,7 @@
 #include <dpp/dpp.h>
 #include "include/Config.h"
-#include <SQLiteCpp/SQLiteCpp.h>
+#include "include/sqlite3pp/sqlite3pp.h"
+// #include <SQLiteCpp/SQLiteCpp.h>
 
 /**
  *  TRACKING:
@@ -9,19 +10,28 @@
  *  Note: DPP won't have as big of a memory footprint
  **/
 
-namespace snipe_database 
+namespace snipe
 {
-    void database_connect()
+    std::string db_connect()
     {
+        std::string s = "Uninitialized";
         try 
         {
-            SQLite::Database db("sharks.db", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);                
-        }
-        catch (const std::exception&) 
-        {
-        }
-        remove("sharks.db");
+            sqlite3pp::database db("sharks.db");
+            s = "Connected!";
+            return s;
+        } 
+        catch (const std::exception&) {return s;}
     }
+    /* void db_connect() */
+    /* { */
+    /*     try  */
+    /*     { */
+    /*         SQLite::Database db("sharks.db", SQLite::OPEN_READWRITE|SQLite::OPEN_CREATE);                 */
+    /*     } */
+    /*     catch (const std::exception&) {} */
+    /*     remove("sharks.db"); */
+    /* } */
 }
 
 int main()
@@ -49,8 +59,8 @@ int main()
     {
         if (event.command.get_command_name() == "ping") 
         {
-            snipe_database::database_connect();
-            event.reply("Ping");
+            std::string x = snipe::db_connect();
+            event.reply(x);
         }
     });
 
