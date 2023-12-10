@@ -41,3 +41,4 @@ Only difference in scripts being clean-build.sh will remove all contents and for
 # Resources
 
 [Install and Use SQLite3](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-sqlite-on-ubuntu-20-04)
+[Using SQLite3 and Python](https://www.youtube.com/watch?v=byHcYRpMgI4)
